@@ -2,16 +2,17 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prepare-se - Proteção Contra Catástrofes</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-gray-200 font-sans">
   <!-- Navbar -->
-  <nav class="fixed top-0 left-0 w-full backdrop-blur-lg bg-black/30 z-50 shadow-lg">
+  <nav class="fixed top-0 left-0 w-full backdrop-blur-lg bg-black/30 z-50 shadow-lg transition-all duration-300">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-      <a href="index.html" class="text-emerald-400 font-extrabold text-2xl tracking-wide hover:text-emerald-300">Prepare-se</a>
+      <a href="index.html" class="text-emerald-400 font-extrabold text-2xl tracking-wide hover:text-emerald-300 transition">Prepare-se</a>
       <ul class="hidden md:flex space-x-8 text-gray-300 font-semibold">
         <li><a href="#info" class="hover:text-emerald-400 transition">Informações</a></li>
         <li><a href="#checklist" class="hover:text-emerald-400 transition">Checklist</a></li>
@@ -21,13 +22,10 @@
         <li><a href="integrantes.html" class="hover:text-emerald-400 transition">Integrantes</a></li>
       </ul>
       <button id="menu-btn" class="md:hidden text-emerald-400 focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
-        </svg>
+        <i class="fas fa-bars text-2xl"></i>
       </button>
     </div>
-    <!-- Mobile Menu -->
-    <div id="menu" class="hidden md:hidden bg-black/70 backdrop-blur-lg px-6 py-4 space-y-4 text-center text-gray-300 font-semibold">
+    <div id="mobile-menu" class="hidden md:hidden bg-black/70 backdrop-blur-lg px-6 py-4 space-y-4 text-center text-gray-300 font-semibold">
       <a href="#info" class="block hover:text-emerald-400 transition">Informações</a>
       <a href="#checklist" class="block hover:text-emerald-400 transition">Checklist</a>
       <a href="#quiz" class="block hover:text-emerald-400 transition">Quiz</a>
@@ -38,29 +36,27 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col md:flex-row items-center justify-center px-8 text-center md:text-left max-w-7xl mx-auto pt-24 md:pt-0">
+  <section class="min-h-screen flex flex-col md:flex-row items-center justify-center px-8 text-center md:text-left max-w-7xl mx-auto pt-24 md:pt-0 bg-[radial-gradient(circle_at_top_left,#1e293b_0%,#0f172a_70%)] animate-gradient">
     <div class="flex-1 space-y-6">
       <h1 class="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-emerald-400">
         Prepare-se<br />
-        <span class="text-gray-200 font-light">Proteção Contra Catástrofes</span>
+        <span class="text-gray-300 font-light">Proteção Contra Catástrofes</span>
       </h1>
-      <p class="text-gray-300 max-w-xl text-lg md:text-xl">
+      <p class="text-gray-400 max-w-xl text-lg md:text-xl">
         Conheça os passos essenciais para enfrentar catástrofes com segurança e consciência.
       </p>
-      <a href="#info" class="inline-block bg-emerald-500 hover:bg-emerald-600 px-8 py-4 rounded-lg font-semibold text-white shadow-lg transition-transform transform hover:scale-105">
-        Começar
-      </a>
+      <a href="#info" class="inline-block bg-emerald-500 hover:bg-emerald-600 px-8 py-4 rounded-lg font-semibold text-white shadow-lg transition-transform hover:scale-105">Começar</a>
     </div>
     <div class="flex-1 mt-12 md:mt-0">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Preparação para emergências" class="rounded-3xl shadow-2xl mx-auto max-w-full" />
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Preparação para emergências" class="rounded-3xl shadow-2xl mx-auto max-w-full animate-fade-in" />
     </div>
   </section>
 
   <!-- Informações Principais -->
   <section id="info" class="py-24 px-6 max-w-7xl mx-auto">
-    <h2 class="text-4xl font-bold mb-12 text-center text-emerald-400">Catástrofes Naturais</h2>
+    <h2 class="text-4xl font-bold mb-12 text-center text-emerald-400 animate-fade-in-up">Catástrofes Naturais</h2>
     <div class="space-y-8 max-w-3xl mx-auto">
-      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg">
+      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-100">
         <img src="img/terremoto.jpg" alt="Destruição causada por terremoto na Turquia, 2023" class="w-full h-64 object-cover rounded-3xl mb-6" />
         <img src="https://ogimg.infoglobo.com.br/mundo/2023/02/terremoto-turquia-e-siria-veja-novas-imagens-de-antes-e-depois-de-locais-destruidos/25885385_0c_b1/ARQUIVO/850x567.jpeg" alt="Destruição causada por terremoto na Turquia, 2023" class="w-full h-64 object-cover rounded-3xl mb-6" />
         <h3 class="text-3xl font-bold mb-4 text-emerald-400 flex items-center gap-2">🌍 Terremoto</h3>
@@ -69,7 +65,7 @@
         </p>
         <p class="text-gray-400 text-sm">Destruição em Hatay, Turquia, após terremoto de 2023. Foto: AFP</p>
       </div>
-      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg">
+      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-200">
         <img src="img/enche.png" alt="Inundação em Derna, Líbia, 2023" class="w-full h-64 object-cover rounded-3xl mb-6" />
         <img src="https://i.guim.co.uk/img/media/96e5f4a0a7a0d56f6e1e3f1f0e3b3b8e8b7b8c6b/0_0_6720_4480/master/6720.jpg?width=700&quality=85&s=7f7b6e5c0e5b7e8c6b5a3f2d1e3b8c7f" alt="Inundação em Derna, Líbia, 2023" class="w-full h-64 object-cover rounded-3xl mb-6" />
         <h3 class="text-3xl font-bold mb-4 text-emerald-400 flex items-center gap-2">🌊 Inundações</h3>
@@ -78,7 +74,7 @@
         </p>
         <p class="text-gray-400 text-sm">Destruição em Derna, Líbia, após a tempestade Daniel, 2023. Foto: Anadolu Agency</p>
       </div>
-      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg">
+      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-300">
         <img src="img/incendio.png" alt="Incêndios florestais no Havaí, 2023" class="w-full h-64 object-cover rounded-3xl mb-6" />
         <img src="https://media.cnn.com/api/v1/images/stellar/prod/230809163717-02-hawaii-wildfires.jpg" alt="Incêndios florestais no Havaí, 2023" class="w-full h-64 object-cover rounded-3xl mb-6" />
         <h3 class="text-3xl font-bold mb-4 text-emerald-400 flex items-center gap-2">🔥 Incêndios Florestais</h3>
@@ -87,7 +83,7 @@
         </p>
         <p class="text-gray-400 text-sm">Incêndios florestais em Maui, Havaí, 2023. Foto: CNN</p>
       </div>
-      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg">
+      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-400">
         <img src="img/tornado.png" alt="Furacão Irma na Flórida, 2017" class="w-full h-64 object-cover rounded-3xl mb-6" />
         <img src="https://media.cnn.com/api/v1/images/stellar/prod/170907142159-hurricane-irma-09-07-2017.jpg" alt="Furacão Irma na Flórida, 2017" class="w-full h-64 object-cover rounded-3xl mb-6" />
         <h3 class="text-3xl font-bold mb-4 text-emerald-400 flex items-center gap-2">🌀 Furacões</h3>
@@ -96,7 +92,7 @@
         </p>
         <p class="text-gray-400 text-sm">Destruição causada pelo furacão Irma na Flórida, 2017. Foto: CNN</p>
       </div>
-      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg">
+      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-500">
         <img src="img/tsuna.png" alt="Tsunami no Japão, 2011" class="w-full h-64 object-cover rounded-3xl mb-6" />
         <img src="https://media.cnn.com/api/v1/images/stellar/prod/110315080252-tsunami-japan-2011.jpg" alt="Tsunami no Japão, 2011" class="w-full h-64 object-cover rounded-3xl mb-6" />
         <h3 class="text-3xl font-bold mb-4 text-emerald-400 flex items-center gap-2">🌊 Tsunami</h3>
@@ -105,7 +101,7 @@
         </p>
         <p class="text-gray-400 text-sm">Destruição causada pelo tsunami no Japão, 2011. Foto: CNN</p>
       </div>
-      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg">
+      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-600">
         <img src="img/des.png" alt="Deslizamento de terra em Petrópolis, Brasil, 2022" class="w-full h-64 object-cover rounded-3xl mb-6" />
         <img src="https://media.cnn.com/api/v1/images/stellar/prod/220216165318-01-brazil-landslide-petropolis.jpg" alt="Deslizamento de terra em Petrópolis, Brasil, 2022" class="w-full h-64 object-cover rounded-3xl mb-6" />
         <h3 class="text-3xl font-bold mb-4 text-emerald-400 flex items-center gap-2">⛰️ Deslizamento de Terra</h3>
@@ -114,7 +110,7 @@
         </p>
         <p class="text-gray-400 text-sm">Deslizamento de terra em Petrópolis, Brasil, 2022. Foto: CNN</p>
       </div>
-      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg">
+      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-700">
         <img src="img/0b8e9cdd-efed-441f-a62d-35e9e8503266.jpg" alt="Tempestade de gelo no Canadá, 2023" class="w-full h-64 object-cover rounded-3xl mb-6" />
         <img src="https://media.cnn.com/api/v1/images/stellar/prod/231205143022-01-canada-ice-storm-2023.jpg" alt="Tempestade de gelo no Canadá, 2023" class="w-full h-64 object-cover rounded-3xl mb-6" />
         <h3 class="text-3xl font-bold mb-4 text-emerald-400 flex items-center gap-2">🧊 Tempestades de Gelo</h3>
@@ -128,10 +124,10 @@
 
   <!-- Como se Virar em Situações de Catástrofes -->
   <section id="sobrevivencia" class="py-24 px-6 bg-[#162433]">
-    <h2 class="text-4xl font-bold mb-12 text-center text-emerald-400">Como se Virar em Situações de Catástrofes</h2>
+    <h2 class="text-4xl font-bold mb-12 text-center text-emerald-400 animate-fade-in-up">Como se Virar em Situações de Catástrofes</h2>
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg">
-        <h3 class="text-2xl font-bold mb-4 text-emerald-400">Dicas Gerais</h3>
+      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-100">
+        <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center gap-2"><i class="fas fa-shield-alt"></i> Dicas Gerais</h3>
         <ul class="text-gray-300 space-y-2">
           <li>Mantenha a calma para tomar decisões racionais.</li>
           <li>Siga as instruções das autoridades locais.</li>
@@ -139,56 +135,56 @@
           <li>Tenha sempre seu kit de emergência à mão.</li>
         </ul>
       </div>
-      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg">
-        <h3 class="text-2xl font-bold mb-4 text-emerald-400">Terremoto</h3>
+      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-200">
+        <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center gap-2"><i class="fas fa-earth-americas"></i> Terremoto</h3>
         <ul class="text-gray-300 space-y-2">
           <li>Abaixe-se, cubra a cabeça e se abrigue sob uma mesa sólida.</li>
           <li>Evite janelas e objetos que possam cair.</li>
           <li>Após o tremor, saia de prédios danificados com cuidado.</li>
         </ul>
       </div>
-      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg">
-        <h3 class="text-2xl font-bold mb-4 text-emerald-400">Inundações</h3>
+      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-300">
+        <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center gap-2"><i class="fas fa-water"></i> Inundações</h3>
         <ul class="text-gray-300 space-y-2">
           <li>Suba para áreas elevadas ou telhados, se possível.</li>
           <li>Evite água parada, que pode conter correntezas ou contaminações.</li>
           <li>Use um bote ou objeto flutuante se necessário.</li>
         </ul>
       </div>
-      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg">
-        <h3 class="text-2xl font-bold mb-4 text-emerald-400">Incêndios Florestais</h3>
+      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-400">
+        <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center gap-2"><i class="fas fa-fire"></i> Incêndios Florestais</h3>
         <ul class="text-gray-300 space-y-2">
           <li>Evacue imediatamente se ordenado pelas autoridades.</li>
           <li>Proteja-se do calor e da fumaça com roupas úmidas.</li>
           <li>Dirija-se a uma zona segura com pouca vegetação.</li>
         </ul>
       </div>
-      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg">
-        <h3 class="text-2xl font-bold mb-4 text-emerald-400">Furacões</h3>
+      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-500">
+        <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center gap-2"><i class="fas fa-wind"></i> Furacões</h3>
         <ul class="text-gray-300 space-y-2">
           <li>Procure um abrigo interno, longe de janelas.</li>
           <li>Evite viajar durante a tempestade.</li>
           <li>Prepare-se para quedas de energia com lanternas e alimentos.</li>
         </ul>
       </div>
-      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg">
-        <h3 class="text-2xl font-bold mb-4 text-emerald-400">Tsunami</h3>
+      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-600">
+        <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center gap-2"><i class="fas fa-wave-square"></i> Tsunami</h3>
         <ul class="text-gray-300 space-y-2">
           <li>Corra para áreas altas imediatamente após um terremoto.</li>
           <li>Evite a costa até que seja seguro retornar.</li>
           <li>Acompanhe alertas de tsunami em rádios ou aplicativos.</li>
         </ul>
       </div>
-      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg">
-        <h3 class="text-2xl font-bold mb-4 text-emerald-400">Deslizamento de Terra</h3>
+      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-700">
+        <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center gap-2"><i class="fas fa-mountain"></i> Deslizamento de Terra</h3>
         <ul class="text-gray-300 space-y-2">
           <li>Evacue áreas inclinadas após chuvas intensas.</li>
           <li>Monitore sinais como rachaduras no solo.</li>
           <li>Mantenha uma distância segura de encostas instáveis.</li>
         </ul>
       </div>
-      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg">
-        <h3 class="text-2xl font-bold mb-4 text-emerald-400">Tempestades de Gelo</h3>
+      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-800">
+        <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center gap-2"><i class="fas fa-snowflake"></i> Tempestades de Gelo</h3>
         <ul class="text-gray-300 space-y-2">
           <li>Fique em casa e evite viajar em estradas congeladas.</li>
           <li>Use cobertores e aqueça-se com fontes seguras de calor.</li>
@@ -201,52 +197,52 @@
   <!-- Checklist -->
   <section id="checklist" class="py-24 px-6 bg-[#162433]">
     <div class="max-w-3xl mx-auto bg-[#0f172a] rounded-3xl p-12 glass shadow-lg">
-      <h2 class="text-3xl font-bold mb-10 text-center text-emerald-400">Checklist de Preparação</h2>
-      <ul class="space-y-6 text-gray-200 text-lg">
+      <h2 class="text-3xl font-bold mb-10 text-center text-emerald-400 animate-fade-in-up">Checklist de Preparação</h2>
+      <ul id="checklist-items" class="space-y-6 text-gray-200 text-lg">
         <li class="flex items-center gap-4">
-          <input id="item1" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500" />
+          <input id="item1" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
           <label for="item1" class="select-none cursor-pointer">Kit de emergência montado</label>
         </li>
         <li class="flex items-center gap-4">
-          <input id="item2" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500" />
+          <input id="item2" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
           <label for="item2" class="select-none cursor-pointer">Plano de evacuação definido</label>
         </li>
         <li class="flex items-center gap-4">
-          <input id="item3" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500" />
+          <input id="item3" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
           <label for="item3" class="select-none cursor-pointer">Contatos de emergência atualizados</label>
         </li>
         <li class="flex items-center gap-4">
-          <input id="item4" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500" />
+          <input id="item4" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
           <label for="item4" class="select-none cursor-pointer">Treinamento básico de primeiros socorros</label>
         </li>
         <li class="flex items-center gap-4">
-          <input id="item5" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500" />
+          <input id="item5" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
           <label for="item5" class="select-none cursor-pointer">Estoque de água e alimentos não perecíveis</label>
         </li>
         <li class="flex items-center gap-4">
-          <input id="item6" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500" />
+          <input id="item6" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
           <label for="item6" class="select-none cursor-pointer">Documentos importantes em local seguro</label>
         </li>
         <li class="flex items-center gap-4">
-          <input id="item7" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500" />
+          <input id="item7" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
           <label for="item7" class="select-none cursor-pointer">Lanterna e baterias sobressalentes</label>
         </li>
         <li class="flex items-center gap-4">
-          <input id="item8" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500" />
+          <input id="item8" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
           <label for="item8" class="select-none cursor-pointer">Rádio portátil para atualizações</label>
         </li>
         <li class="flex items-center gap-4">
-          <input id="item9" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500" />
+          <input id="item9" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
           <label for="item9" class="select-none cursor-pointer">Roupas quentes e cobertores</label>
         </li>
         <li class="flex items-center gap-4">
-          <input id="item10" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500" />
+          <input id="item10" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
           <label for="item10" class="select-none cursor-pointer">Verificação de estruturas da casa (ex.: rachaduras)</label>
         </li>
       </ul>
       <button
         onclick="resetChecklist()"
-        class="mt-12 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg py-3 shadow-lg transition transform hover:scale-105"
+        class="mt-12 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg py-3 shadow-lg transition-transform hover:scale-105"
       >
         Limpar Checklist
       </button>
@@ -256,61 +252,61 @@
   <!-- Quiz -->
   <section id="quiz" class="py-24 px-6 bg-[#162433]">
     <div class="max-w-3xl mx-auto bg-[#0f172a] rounded-3xl p-12 glass shadow-lg">
-      <h2 class="text-3xl font-bold mb-8 text-center text-emerald-400">Quiz de Preparação Contra Catástrofes</h2>
+      <h2 class="text-3xl font-bold mb-8 text-center text-emerald-400 animate-fade-in-up">Quiz de Preparação Contra Catástrofes</h2>
       <form id="quiz-form" class="space-y-8">
+        <div class="question-bar"></div>
         <div>
           <p class="text-gray-300 font-semibold mb-4">1. Qual item NÃO é essencial em um kit de emergência?</p>
-          <label class="block text-gray-300">
-            <input type="radio" name="q1" value="a" class="mr-2" />
-            Água potável
-          </label>
-          <label class="block text-gray-300">
-            <input type="radio" name="q1" value="b" class="mr-2" />
-            Remédios básicos
-          </label>
-          <label class="block text-gray-300">
-            <input type="radio" name="q1" value="c" class="mr-2" />
-            Joias de ouro
-          </label>
+          <div class="quiz-options">
+            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
+              <input type="radio" name="q1" value="a" class="mr-2" /> Água potável
+            </label>
+            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
+              <input type="radio" name="q1" value="b" class="mr-2" /> Remédios básicos
+            </label>
+            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
+              <input type="radio" name="q1" value="c" class="mr-2" /> Joias de ouro
+            </label>
+          </div>
         </div>
+        <div class="question-bar"></div>
         <div>
           <p class="text-gray-300 font-semibold mb-4">2. Qual é o ponto principal para um plano de evacuação eficiente?</p>
-          <label class="block text-gray-300">
-            <input type="radio" name="q2" value="a" class="mr-2" />
-            Definir rotas de fuga e pontos de encontro
-          </label>
-          <label class="block text-gray-300">
-            <input type="radio" name="q2" value="b" class="mr-2" />
-            Escolher um lugar para guardar dinheiro
-          </label>
-          <label class="block text-gray-300">
-            <input type="radio" name="q2" value="c" class="mr-2" />
-            Comprar um telefone novo
-          </label>
+          <div class="quiz-options">
+            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
+              <input type="radio" name="q2" value="a" class="mr-2" /> Definir rotas de fuga e pontos de encontro
+            </label>
+            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
+              <input type="radio" name="q2" value="b" class="mr-2" /> Escolher um lugar para guardar dinheiro
+            </label>
+            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
+              <input type="radio" name="q2" value="c" class="mr-2" /> Comprar um telefone novo
+            </label>
+          </div>
         </div>
+        <div class="question-bar"></div>
         <div>
           <p class="text-gray-300 font-semibold mb-4">3. Qual ferramenta é útil para comunicação em emergências?</p>
-          <label class="block text-gray-300">
-            <input type="radio" name="q3" value="a" class="mr-2" />
-            Aplicativos confiáveis e baterias portáteis
-          </label>
-          <label class="block text-gray-300">
-            <input type="radio" name="q3" value="b" class="mr-2" />
-            Redes sociais de entretenimento
-          </label>
-          <label class="block text-gray-300">
-            <input type="radio" name="q3" value="c" class="mr-2" />
-            Jogos online
-          </label>
+          <div class="quiz-options">
+            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
+              <input type="radio" name="q3" value="a" class="mr-2" /> Aplicativos confiáveis e baterias portáteis
+            </label>
+            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
+              <input type="radio" name="q3" value="b" class="mr-2" /> Redes sociais de entretenimento
+            </label>
+            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
+              <input type="radio" name="q3" value="c" class="mr-2" /> Jogos online
+            </label>
+          </div>
         </div>
         <button
           type="submit"
-          class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg py-3 shadow-lg transition transform hover:scale-105"
+          class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg py-3 shadow-lg transition-transform hover:scale-105 btn-submit"
         >
           Enviar Respostas
         </button>
       </form>
-      <div id="quiz-result" class="mt-8 text-center text-lg font-semibold text-emerald-400"></div>
+      <div id="quiz-result" class="mt-8 text-center text-lg font-semibold text-emerald-400 quiz-result"></div>
     </div>
   </section>
 

@@ -2,6 +2,7 @@ body {
   background: linear-gradient(135deg, #0f172a, #1e293b);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #e0e7ff;
+  overflow-x: hidden;
 }
 
 .glass {
@@ -18,7 +19,6 @@ body {
   border-color: rgba(72, 240, 144, 0.6);
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -32,29 +32,21 @@ body {
   border-radius: 4px;
 }
 
-/* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* Barrinha colorida na pergunta */
 .question-bar {
   height: 5px;
   width: 50px;
-  background-color: #48f090; /* Verde brilhante, combinando com a paleta */
+  background-color: #48f090;
   border-radius: 2px;
   margin-bottom: 8px;
+  transition: width 0.3s ease;
 }
 
-/* Estilo do quiz */
-.quiz-container {
-  max-width: 600px;
-  margin: auto;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(14px);
+.quiz-container:hover .question-bar {
+  width: 70px;
 }
 
 .quiz-question {
@@ -68,12 +60,12 @@ html {
   display: block;
   margin-bottom: 0.75rem;
   cursor: pointer;
-  color: #cbd5e1; /* Cinza claro */
+  color: #cbd5e1;
   transition: color 0.2s;
 }
 
 .quiz-options input[type="radio"]:checked + label {
-  color: #34d399; /* Verde claro ao selecionar */
+  color: #34d399;
   font-weight: 700;
 }
 
@@ -82,6 +74,7 @@ html {
   font-weight: 700;
   font-size: 1.2rem;
   color: #a7f3d0;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .btn-submit {
@@ -92,9 +85,48 @@ html {
   border-radius: 0.5rem;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-submit:hover {
   background-color: #34d399;
+  transform: translateY(-2px);
+}
+
+.animate-gradient {
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+input[type="checkbox"]:checked + label {
+  color: #34d399;
+  font-weight: 600;
+}
+
+input[type="checkbox"]:focus {
+  outline: none;
+  ring: 2px solid #48f090;
 }
