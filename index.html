@@ -1,315 +1,535 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prepare-se - Proteção Contra Catástrofes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparação para Desastres Climáticos</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-gray-200 font-sans">
-  <!-- Navbar -->
-  <nav class="fixed top-0 left-0 w-full backdrop-blur-lg bg-black/30 z-50 shadow-lg transition-all duration-300">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-      <a href="index.html" class="text-emerald-400 font-extrabold text-2xl tracking-wide hover:text-emerald-300 transition">Prepare-se</a>
-      <ul class="hidden md:flex space-x-8 text-gray-300 font-semibold">
-        <li><a href="#info" class="hover:text-emerald-400 transition">Informações</a></li>
-        <li><a href="#checklist" class="hover:text-emerald-400 transition">Checklist</a></li>
-        <li><a href="#quiz" class="hover:text-emerald-400 transition">Quiz</a></li>
-        <li><a href="contato.html" class="hover:text-emerald-400 transition">Contato</a></li>
-        <li><a href="faq.html" class="hover:text-emerald-400 transition">FAQ</a></li>
-        <li><a href="integrantes.html" class="hover:text-emerald-400 transition">Integrantes</a></li>
+<body>
+
+<header class="navbar">
+  <div class="container flex items-center justify-between">
+    <div class="logo-container">
+      <a href="#" class="flex items-center space-x-3">
+        
+        <h2 class="text-xl font-bold">Guia de Preparação</h2>
+      </a>
+    </div>
+
+    <button class="hamburger-menu" aria-label="Abrir menu de navegação">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links">
+      <ul class="flex space-x-6">
+        <li><a href="#boas-vindas">Início</a></li>
+        <li><a href="#informacoes">Informações</a></li>
+        <li><a href="#plano-familiar">Plano Familiar</a></li>
+        <li><a href="#recursos-uteis">Recursos</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#checklist">Checklist</a></li>
+        <li><a href="integrantes.html">Integrantes</a></li>
+        <li><a href="faq.html">Faq</a></li>
+        <li><a href="contato.html">Contato</a></li>
       </ul>
-      <button id="menu-btn" class="md:hidden text-emerald-400 focus:outline-none">
-        <i class="fas fa-bars text-2xl"></i>
-      </button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-black/70 backdrop-blur-lg px-6 py-4 space-y-4 text-center text-gray-300 font-semibold">
-      <a href="#info" class="block hover:text-emerald-400 transition">Informações</a>
-      <a href="#checklist" class="block hover:text-emerald-400 transition">Checklist</a>
-      <a href="#quiz" class="block hover:text-emerald-400 transition">Quiz</a>
-      <a href="contato.html" class="block hover:text-emerald-400 transition">Contato</a>
-      <a href="faq.html" class="block hover:text-emerald-400 transition">FAQ</a>
-      <a href="integrantes.html" class="block hover:text-emerald-400 transition">Integrantes</a>
-    </div>
-  </nav>
+    </nav>
+  </div>
+</header>
 
-  <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col md:flex-row items-center justify-center px-8 text-center md:text-left max-w-7xl mx-auto pt-24 md:pt-0 hero-bg">
-    <div class="flex-1 space-y-6">
-      <h1 class="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-emerald-400">
-        Prepare-se<br />
-        <span class="text-gray-300 font-light">Proteção Contra Catástrofes</span>
-      </h1>
-      <p class="text-gray-400 max-w-xl text-lg md:text-xl">
-        Conheça os passos essenciais para enfrentar catástrofes com segurança e consciência.
-      </p>
-      <a href="#info" class="inline-block bg-emerald-500 hover:bg-emerald-600 px-8 py-4 rounded-lg font-semibold text-white shadow-lg transition-transform hover:scale-105">Começar</a>
-    </div>
-    <div class="flex-1 mt-12 md:mt-0">
-      <img src="img/Gemini_Generated_Image_krv61ykrv61ykrv6.png" alt="Tempestade de gelo" class="rounded-3xl shadow-2xl mx-auto max-w-full animate-fade-in" />
-    </div>
-  </section>
-
-  <!-- Informações Principais -->
-  <section id="info" class="py-24 px-6 max-w-7xl mx-auto">
-    <h2 class="text-4xl font-bold mb-12 text-center text-emerald-400 animate-fade-in-up">Catástrofes Naturais</h2>
-    <div class="space-y-8 max-w-3xl mx-auto">
-      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-100">
-        <img src="img/terremoto.jpg" alt="Destruição causada por terremoto na Turquia, 2023" class="w-full h-64 object-cover rounded-3xl mb-6" />
-        <img src="https://ogimg.infoglobo.com.br/mundo/2023/02/terremoto-turquia-e-siria-veja-novas-imagens-de-antes-e-depois-de-locais-destruidos/25885385_0c_b1/ARQUIVO/850x567.jpeg" alt="Destruição causada por terremoto na Turquia, 2023" class="w-full h-64 object-cover rounded-3xl mb-6" />
-        <h3 class="text-3xl font-bold mb-4 text-emerald-400 flex items-center gap-2">🌍 Terremoto</h3>
-        <p class="text-gray-300 leading-relaxed mb-4">
-          Terremotos são causados por movimentos na crosta terrestre, podendo causar destruição de edifícios e milhares de mortes. Em 2023, um sismo de magnitude 7.8 matou mais de 40 mil pessoas na Turquia e na Síria.
-        </p>
-        <p class="text-gray-400 text-sm">Destruição em Hatay, Turquia, após terremoto de 2023. Foto: AFP</p>
-      </div>
-      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-200">
-        <img src="img/enche.png" alt="Inundação em Derna, Líbia, 2023" class="w-full h-64 object-cover rounded-3xl mb-6" />
-        <img src="https://i.guim.co.uk/img/media/96e5f4a0a7a0d56f6e1e3f1f0e3b3b8e8b7b8c6b/0_0_6720_4480/master/6720.jpg?width=700&quality=85&s=7f7b6e5c0e5b7e8c6b5a3f2d1e3b8c7f" alt="Inundação em Derna, Líbia, 2023" class="w-full h-64 object-cover rounded-3xl mb-6" />
-        <h3 class="text-3xl font-bold mb-4 text-emerald-400 flex items-center gap-2">🌊 Inundações</h3>
-        <p class="text-gray-300 leading-relaxed mb-4">
-          Inundações ocorrem devido a chuvas intensas ou rompimento de barragens, afetando áreas urbanas e rurais, causando perdas humanas e materiais. Em 2023, a tempestade Daniel na Líbia causou milhares de mortes após romper barragens.
-        </p>
-        <p class="text-gray-400 text-sm">Destruição em Derna, Líbia, após a tempestade Daniel, 2023. Foto: Anadolu Agency</p>
-      </div>
-      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-300">
-        <img src="img/incendio.png" alt="Incêndios florestais no Havaí, 2023" class="w-full h-64 object-cover rounded-3xl mb-6" />
-        <img src="https://media.cnn.com/api/v1/images/stellar/prod/230809163717-02-hawaii-wildfires.jpg" alt="Incêndios florestais no Havaí, 2023" class="w-full h-64 object-cover rounded-3xl mb-6" />
-        <h3 class="text-3xl font-bold mb-4 text-emerald-400 flex items-center gap-2">🔥 Incêndios Florestais</h3>
-        <p class="text-gray-300 leading-relaxed mb-4">
-          Incêndios florestais, intensificados por secas e calor extremo, destroem ecossistemas e comunidades. Em 2023, incêndios no Havaí devastaram áreas rurais, matando dezenas de pessoas.
-        </p>
-        <p class="text-gray-400 text-sm">Incêndios florestais em Maui, Havaí, 2023. Foto: CNN</p>
-      </div>
-      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-400">
-        <img src="img/tornado.png" alt="Furacão Irma na Flórida, 2017" class="w-full h-64 object-cover rounded-3xl mb-6" />
-        <img src="https://media.cnn.com/api/v1/images/stellar/prod/170907142159-hurricane-irma-09-07-2017.jpg" alt="Furacão Irma na Flórida, 2017" class="w-full h-64 object-cover rounded-3xl mb-6" />
-        <h3 class="text-3xl font-bold mb-4 text-emerald-400 flex items-center gap-2">🌀 Furacões</h3>
-        <p class="text-gray-300 leading-relaxed mb-4">
-          Furacões são tempestades tropicais com ventos intensos, causando inundações e destruição. Eventos como o furacão Irma em 2017 e tempestades recentes no Atlântico destacam sua força devastadora.
-        </p>
-        <p class="text-gray-400 text-sm">Destruição causada pelo furacão Irma na Flórida, 2017. Foto: CNN</p>
-      </div>
-      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-500">
-        <img src="img/tsuna.png" alt="Tsunami no Japão, 2011" class="w-full h-64 object-cover rounded-3xl mb-6" />
-        <img src="https://media.cnn.com/api/v1/images/stellar/prod/110315080252-tsunami-japan-2011.jpg" alt="Tsunami no Japão, 2011" class="w-full h-64 object-cover rounded-3xl mb-6" />
-        <h3 class="text-3xl font-bold mb-4 text-emerald-400 flex items-center gap-2">🌊 Tsunami</h3>
-        <p class="text-gray-300 leading-relaxed mb-4">
-          Tsunamis são ondas gigantes causadas por terremotos submarinos ou erupções vulcânicas, devastando áreas costeiras. O tsunami de 2011 no Japão, desencadeado por um terremoto de magnitude 9.0, matou mais de 15 mil pessoas.
-        </p>
-        <p class="text-gray-400 text-sm">Destruição causada pelo tsunami no Japão, 2011. Foto: CNN</p>
-      </div>
-      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-600">
-        <img src="img/des.png" alt="Deslizamento de terra em Petrópolis, Brasil, 2022" class="w-full h-64 object-cover rounded-3xl mb-6" />
-        <img src="https://media.cnn.com/api/v1/images/stellar/prod/220216165318-01-brazil-landslide-petropolis.jpg" alt="Deslizamento de terra em Petrópolis, Brasil, 2022" class="w-full h-64 object-cover rounded-3xl mb-6" />
-        <h3 class="text-3xl font-bold mb-4 text-emerald-400 flex items-center gap-2">⛰️ Deslizamento de Terra</h3>
-        <p class="text-gray-300 leading-relaxed mb-4">
-          Deslizamentos de terra ocorrem em áreas instáveis, geralmente após chuvas intensas, soterrando comunidades. Em 2022, Petrópolis, no Brasil, sofreu com deslizamentos que mataram mais de 200 pessoas.
-        </p>
-        <p class="text-gray-400 text-sm">Deslizamento de terra em Petrópolis, Brasil, 2022. Foto: CNN</p>
-      </div>
-      <div class="bg-[#0f172a] rounded-3xl p-12 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-700">
-        <img src="img/0b8e9cdd-efed-441f-a62d-35e9e8503266.jpg" alt="Tempestade de gelo no Canadá, 2023" class="w-full h-64 object-cover rounded-3xl mb-6" />
-        <img src="https://media.cnn.com/api/v1/images/stellar/prod/231205143022-01-canada-ice-storm-2023.jpg" alt="Tempestade de gelo no Canadá, 2023" class="w-full h-64 object-cover rounded-3xl mb-6" />
-        <h3 class="text-3xl font-bold mb-4 text-emerald-400 flex items-center gap-2">🧊 Tempestades de Gelo</h3>
-        <p class="text-gray-300 leading-relaxed mb-4">
-          Tempestades de gelo ocorrem quando chuva congelante forma camadas de gelo em superfícies, causando quedas de energia e acidentes. Em 2023, uma tempestade no Canadá deixou milhões sem eletricidade por dias.
-        </p>
-        <p class="text-gray-400 text-sm">Destruição causada por tempestade de gelo no Canadá, 2023. Foto: CNN</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Como se Virar em Situações de Catástrofes -->
-  <section id="sobrevivencia" class="py-24 px-6 bg-[#162433]">
-    <h2 class="text-4xl font-bold mb-12 text-center text-emerald-400 animate-fade-in-up">Como se Virar em Situações de Catástrofes</h2>
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-100">
-        <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center gap-2"><i class="fas fa-shield-alt"></i> Dicas Gerais</h3>
-        <ul class="text-gray-300 space-y-2">
-          <li>Mantenha a calma para tomar decisões racionais.</li>
-          <li>Siga as instruções das autoridades locais.</li>
-          <li>Procure abrigo seguro e evite áreas de risco.</li>
-          <li>Tenha sempre seu kit de emergência à mão.</li>
-        </ul>
-      </div>
-      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-200">
-        <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center gap-2"><i class="fas fa-earth-americas"></i> Terremoto</h3>
-        <ul class="text-gray-300 space-y-2">
-          <li>Abaixe-se, cubra a cabeça e se abrigue sob uma mesa sólida.</li>
-          <li>Evite janelas e objetos que possam cair.</li>
-          <li>Após o tremor, saia de prédios danificados com cuidado.</li>
-        </ul>
-      </div>
-      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-300">
-        <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center gap-2"><i class="fas fa-water"></i> Inundações</h3>
-        <ul class="text-gray-300 space-y-2">
-          <li>Suba para áreas elevadas ou telhados, se possível.</li>
-          <li>Evite água parada, que pode conter correntezas ou contaminações.</li>
-          <li>Use um bote ou objeto flutuante se necessário.</li>
-        </ul>
-      </div>
-      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-400">
-        <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center gap-2"><i class="fas fa-fire"></i> Incêndios Florestais</h3>
-        <ul class="text-gray-300 space-y-2">
-          <li>Evacue imediatamente se ordenado pelas autoridades.</li>
-          <li>Proteja-se do calor e da fumaça com roupas úmidas.</li>
-          <li>Dirija-se a uma zona segura com pouca vegetação.</li>
-        </ul>
-      </div>
-      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-500">
-        <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center gap-2"><i class="fas fa-wind"></i> Furacões</h3>
-        <ul class="text-gray-300 space-y-2">
-          <li>Procure um abrigo interno, longe de janelas.</li>
-          <li>Evite viajar durante a tempestade.</li>
-          <li>Prepare-se para quedas de energia com lanternas e alimentos.</li>
-        </ul>
-      </div>
-      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-600">
-        <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center gap-2"><i class="fas fa-wave-square"></i> Tsunami</h3>
-        <ul class="text-gray-300 space-y-2">
-          <li>Corra para áreas altas imediatamente após um terremoto.</li>
-          <li>Evite a costa até que seja seguro retornar.</li>
-          <li>Acompanhe alertas de tsunami em rádios ou aplicativos.</li>
-        </ul>
-      </div>
-      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-700">
-        <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center gap-2"><i class="fas fa-mountain"></i> Deslizamento de Terra</h3>
-        <ul class="text-gray-300 space-y-2">
-          <li>Evacue áreas inclinadas após chuvas intensas.</li>
-          <li>Monitore sinais como rachaduras no solo.</li>
-          <li>Mantenha uma distância segura de encostas instáveis.</li>
-        </ul>
-      </div>
-      <div class="bg-[#0f172a] rounded-3xl p-6 glass shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 animate-fade-in-up delay-800">
-        <h3 class="text-2xl font-bold mb-4 text-emerald-400 flex items-center gap-2"><i class="fas fa-snowflake"></i> Tempestades de Gelo</h3>
-        <ul class="text-gray-300 space-y-2">
-          <li>Fique em casa e evite viajar em estradas congeladas.</li>
-          <li>Use cobertores e aqueça-se com fontes seguras de calor.</li>
-          <li>Prepare-se para quedas de energia com suprimentos de emergência.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Checklist -->
-  <section id="checklist" class="py-24 px-6 bg-[#162433]">
-    <div class="max-w-3xl mx-auto bg-[#0f172a] rounded-3xl p-12 glass shadow-lg">
-      <h2 class="text-3xl font-bold mb-10 text-center text-emerald-400 animate-fade-in-up">Checklist de Preparação</h2>
-      <ul id="checklist-items" class="space-y-6 text-gray-200 text-lg">
-        <li class="flex items-center gap-4">
-          <input id="item1" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
-          <label for="item1" class="select-none cursor-pointer">Kit de emergência montado</label>
-        </li>
-        <li class="flex items-center gap-4">
-          <input id="item2" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
-          <label for="item2" class="select-none cursor-pointer">Plano de evacuação definido</label>
-        </li>
-        <li class="flex items-center gap-4">
-          <input id="item3" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
-          <label for="item3" class="select-none cursor-pointer">Contatos de emergência atualizados</label>
-        </li>
-        <li class="flex items-center gap-4">
-          <input id="item4" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
-          <label for="item4" class="select-none cursor-pointer">Treinamento básico de primeiros socorros</label>
-        </li>
-        <li class="flex items-center gap-4">
-          <input id="item5" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
-          <label for="item5" class="select-none cursor-pointer">Estoque de água e alimentos não perecíveis</label>
-        </li>
-        <li class="flex items-center gap-4">
-          <input id="item6" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
-          <label for="item6" class="select-none cursor-pointer">Documentos importantes em local seguro</label>
-        </li>
-        <li class="flex items-center gap-4">
-          <input id="item7" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
-          <label for="item7" class="select-none cursor-pointer">Lanterna e baterias sobressalentes</label>
-        </li>
-        <li class="flex items-center gap-4">
-          <input id="item8" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
-          <label for="item8" class="select-none cursor-pointer">Rádio portátil para atualizações</label>
-        </li>
-        <li class="flex items-center gap-4">
-          <input id="item9" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
-          <label for="item9" class="select-none cursor-pointer">Roupas quentes e cobertores</label>
-        </li>
-        <li class="flex items-center gap-4">
-          <input id="item10" type="checkbox" class="w-6 h-6 text-emerald-400 rounded focus:ring-emerald-500 transition-all duration-200" />
-          <label for="item10" class="select-none cursor-pointer">Verificação de estruturas da casa (ex.: rachaduras)</label>
-        </li>
-      </ul>
-      <button
-        onclick="resetChecklist()"
-        class="mt-12 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg py-3 shadow-lg transition-transform hover:scale-105"
-      >
-        Limpar Checklist
-      </button>
-    </div>
-  </section>
-
-  <!-- Quiz -->
-  <section id="quiz" class="py-24 px-6 bg-[#162433]">
-    <div class="max-w-3xl mx-auto bg-[#0f172a] rounded-3xl p-12 glass shadow-lg">
-      <h2 class="text-3xl font-bold mb-8 text-center text-emerald-400 animate-fade-in-up">Quiz de Preparação Contra Catástrofes</h2>
-      <form id="quiz-form" class="space-y-8">
-        <div class="question-bar"></div>
-        <div>
-          <p class="text-gray-300 font-semibold mb-4">1. Qual item NÃO é essencial em um kit de emergência?</p>
-          <div class="quiz-options">
-            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
-              <input type="radio" name="q1" value="a" class="mr-2" /> Água potável
-            </label>
-            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
-              <input type="radio" name="q1" value="b" class="mr-2" /> Remédios básicos
-            </label>
-            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
-              <input type="radio" name="q1" value="c" class="mr-2" /> Joias de ouro
-            </label>
-          </div>
+<main>
+    <section id="boas-vindas" class="hero-banner"> 
+        <div class="container">
+            <h2>Sua Segurança Começa Aqui</h2>
+            <p class="intro-text">Prepare-se para desastres climáticos com nosso guia completo e proteja sua família.</p>
         </div>
-        <div class="question-bar"></div>
-        <div>
-          <p class="text-gray-300 font-semibold mb-4">2. Qual é o ponto principal para um plano de evacuação eficiente?</p>
-          <div class="quiz-options">
-            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
-              <input type="radio" name="q2" value="a" class="mr-2" /> Definir rotas de fuga e pontos de encontro
-            </label>
-            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
-              <input type="radio" name="q2" value="b" class="mr-2" /> Escolher um lugar para guardar dinheiro
-            </label>
-            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
-              <input type="radio" name="q2" value="c" class="mr-2" /> Comprar um telefone novo
-            </label>
-          </div>
-        </div>
-        <div class="question-bar"></div>
-        <div>
-          <p class="text-gray-300 font-semibold mb-4">3. Qual ferramenta é útil para comunicação em emergências?</p>
-          <div class="quiz-options">
-            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
-              <input type="radio" name="q3" value="a" class="mr-2" /> Aplicativos confiáveis e baterias portáteis
-            </label>
-            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
-              <input type="radio" name="q3" value="b" class="mr-2" /> Redes sociais de entretenimento
-            </label>
-            <label class="block text-gray-400 hover:text-gray-300 transition-colors">
-              <input type="radio" name="q3" value="c" class="mr-2" /> Jogos online
-            </label>
-          </div>
-        </div>
-        <button
-          type="submit"
-          class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg py-3 shadow-lg transition-transform hover:scale-105 btn-submit"
-        >
-          Enviar Respostas
-        </button>
-      </form>
-      <div id="quiz-result" class="mt-8 text-center text-lg font-semibold text-emerald-400 quiz-result"></div>
-    </div>
-  </section>
+    </section>
 
-  <script src="script.js"></script>
+    <section id="informacoes" class="glass">
+        <div class="container info-container">
+            <h2>Informações Essenciais em Catástrofes</h2>
+            <p class="intro-text">
+                As catástrofes climáticas e naturais exigem preparo e conhecimento. Compreender os tipos de desastres e como reagir a cada um deles pode <strong>salvar vidas</strong>. Abaixo, detalhamos algumas ações cruciais:
+            </p>
+            
+            <div class="info-item">
+                <h3>Enchentes</h3>
+                <img src="img/enche.png" alt="Ilustração de enchente" class="info-image">
+                <ul>
+                    <li><strong>Antes:</strong> Monitore alertas meteorológicos. Tenha um kit de emergência. Desligue a energia elétrica e o gás se a água começar a subir.</li>
+                    <li><strong>Durante:</strong> Busque abrigo em locais altos. Evite contato com a água, pois pode estar contaminada e esconder perigos. Não dirija ou caminhe por áreas alagadas.</li>
+                    <li><strong>Depois:</strong> Não retorne para casa antes da liberação das autoridades. Verifique a estrutura da casa e os sistemas elétricos e de gás. Descarte alimentos e água contaminados.</li>
+                </ul>
+            </div>
+
+            <div class="info-item">
+                <h3>Deslizamentos de Terra</h3>
+                <img src="img/des.png" alt="Ilustração de deslizamento de terra" class="info-image">
+                <ul>
+                    <li><strong>Antes:</strong> Observe sinais como rachaduras no solo, árvores inclinadas e muros com danos. Evite construir em áreas de risco.</li>
+                    <li><strong>Durante:</strong> Se ouvir barulhos incomuns (rachaduras, estalos), saia imediatamente do local e procure abrigo em área segura. Não retorne.</li>
+                    <li><strong>Depois:</strong> Mantenha distância da área afetada. Ajude as equipes de resgate, se for seguro.</li>
+                </ul>
+            </div>
+            
+            <div class="info-item">
+                <h3>Tempestades Severas (Vendavais, Granizo)</h3>
+                <img src="img/tempes.png" alt="Ilustração de tempestade com raios e granizo" class="info-image">
+                <ul>
+                    <li><strong>Antes:</strong> Reforce telhados e janelas. Remova objetos soltos do quintal. Procure um abrigo seguro, longe de árvores e fiações elétricas.</li>
+                    <li><strong>Durante:</strong> Fique dentro de casa, longe de janelas. Desligue aparelhos eletrônicos. Se estiver na rua, procure abrigo em um local seguro e evite áreas abertas.</li>
+                    <li><strong>Depois:</strong> Verifique danos na sua propriedade. Cuidado com fiações elétricas caídas. Não toque em objetos metálicos se houver raios.</li>
+                </ul>
+            </div>
+
+            <div class="info-item">
+                <h3>Secas e Ondas de Calor Prolongadas</h3>
+                <img src="img/seca.png" alt="Ilustração de seca" class="info-image"> 
+                <ul>
+                    <li><strong>Antes:</strong> Economize água. Mantenha-se hidratado e evite exposição prolongada ao sol. Tenha um plano para períodos de racionamento de água.</li>
+                    <li><strong>Durante:</strong> Beba bastante líquido, mesmo sem sede. Evite atividades físicas extenuantes ao ar livre. Use roupas leves e claras. Fique em ambientes frescos e ventilados.</li>
+                    <li><strong>Depois:</strong> Continue a economizar água. Ajude a comunidade na recuperação de áreas afetadas pela seca. Monitore a saúde de idosos e crianças.</li>
+                </ul>
+            </div>
+
+            <div class="info-item">
+                <h3>Incêndios Florestais</h3>
+                <img src="img/incendio.png" alt="Ilustração de incêndio florestal" class="info-image"> 
+                <ul>
+                    <li><strong>Antes:</strong> Mantenha áreas próximas à sua casa limpas e sem vegetação seca. Crie um plano de evacuação familiar. Tenha documentos importantes à mão.</li>
+                    <li><strong>Durante:</strong> Se for alertado, evacue imediatamente. Siga as rotas de fuga indicadas. Cubra nariz e boca para proteger-se da fumaça.</li>
+                    <li><strong>Depois:</strong> Só retorne para casa quando as autoridades liberarem. Cuidado com brasas e focos de incêndio remanescentes. Verifique a qualidade do ar.</li>
+                </ul>
+            </div>
+
+            <div class="info-item">
+                <h3>Ciclones/Furacões/Tufões</h3>
+                <img src="img/tornado.png" alt="Ilustração de ciclone" class="info-image"> 
+                <ul>
+                    <li><strong>Antes:</strong> Reforce portas e janelas. Armazene água e alimentos. Identifique o abrigo mais seguro em sua casa ou saiba para onde evacuar.</li>
+                    <li><strong>Durante:</strong> Permaneça em local seguro. Mantenha-se informado pelas autoridades. Evite sair durante o "olho" da tempestade, pois o vento pode retornar com força.</li>
+                    <li><strong>Depois:</strong> Cuidado com fiações elétricas caídas e objetos pontiagudos. Não use água da torneira antes da confirmação de que é segura. Ajude vizinhos, se puder.</li>
+                </ul>
+            </div>
+
+            <div class="info-item">
+                <h3>Nevascas Intensas</h3>
+                <img src="img/nevas.png" alt="Ilustração de nevasca" class="info-image"> 
+                <ul>
+                    <li><strong>Antes:</strong> Garanta aquecimento e estoque de alimentos/água. Verifique o isolamento de sua casa. Tenha um kit de emergência para veículos se for viajar.</li>
+                    <li><strong>Durante:</strong> Permaneça em casa. Se precisar sair, vista-se em camadas e proteja-se do frio. Cuidado com o risco de hipotermia e congelamento.</li>
+                    <li><strong>Depois:</strong> Limpe a neve com segurança, evitando esforço excessivo. Ajude vizinhos idosos ou com dificuldades. Fique atento a alertas de congelamento de tubulações.</li>
+                </ul>
+            </div>
+
+            <div class="info-item">
+                <h3>Tsunami</h3>
+                <img src="img/tsuna.png" alt="Ilustração de tsunami" class="info-image"> 
+                <ul>
+                    <li><strong>Antes:</strong> Se você vive em área costeira e sentir um terremoto forte que dure mais de 20 segundos ou vir o mar recuar anormalmente, procure terras altas imediatamente. Não espere por alertas oficiais.</li>
+                    <li><strong>Durante:</strong> Dirija-se ao ponto de evacuação mais alto e seguro o mais rápido possível. Se não conseguir escapar, suba no ponto mais alto de um prédio resistente. Mantenha-se longe de rios e riachos que correm para o oceano.</li>
+                    <li><strong>Depois:</strong> Não retorne à área costeira até que as autoridades declarem ser seguro. Cuidado com ondas secundárias e inundações. Evite água de enchente, que pode estar contaminada.</li>
+                </ul>
+            </div>
+
+            <p>Lembre-se: <strong>a informação é a sua primeira linha de defesa.</strong> Mantenha-se atualizado e compartilhe este conhecimento com sua família e comunidade.</p>
+            <a href="#quiz" class="btn-submit">Teste Seus Conhecimentos</a>
+        </div>
+    </section>
+
+    <section id="plano-familiar" class="glass">
+        <div class="container">
+            <h2>Crie seu Plano de Emergência Familiar</h2>
+            <p>Um plano de emergência familiar é vital para garantir que todos saibam o que fazer e para onde ir em caso de um desastre. Conversem sobre essas etapas:</p>
+            <ul>
+                <li><strong>Pontos de Encontro:</strong> Defina dois pontos de encontro: um fora de sua casa (em caso de incêndio repentino) e outro fora do seu bairro (para uma evacuação mais ampla).</li>
+                <li><strong>Contatos de Emergência:</strong> Anotem e memorizem números importantes: emergência (190, 193, 199), parentes fora da área, e o número de um contato fora do estado/cidade para quem todos possam ligar.</li>
+                <li><strong>Rotas de Fuga:</strong> Mapeiem as rotas de fuga da sua casa e do seu bairro. Pratiquem essas rotas.</li>
+                <li><strong>Comunicação:</strong> Estabeleçam como se comunicarão se os celulares não funcionarem (ex: mensagens de texto, rádio, contato via terceiro).</li>
+                <li><strong>Desligamento de Utilitários:</strong> Saibam onde e como desligar a energia, o gás e a água da sua casa.</li>
+                <li><strong>Kit de Emergência:</strong> Montem e mantenham um kit de emergência pronto, com suprimentos para pelo menos 3 dias.</li>
+                <li><strong>Cuidado com Animais de Estimação:</strong> Inclua seus pets no plano, com comida, água, coleira e identificação.</li>
+            </ul>
+            <p>Revise este plano com sua família a cada seis meses e faça simulações para garantir que todos se sintam seguros e preparados.</p>
+        </div>
+    </section>
+
+    <section id="recursos-uteis" class="glass">
+        <div class="container">
+            <h2>Recursos e Contatos Úteis</h2>
+            <p>Saber a quem recorrer em momentos de crise é tão importante quanto a preparação individual. Mantenha estes contatos e recursos à mão:</p>
+            <ul>
+                <li><strong>Defesa Civil:</strong> É o órgão responsável pela prevenção, mitigação, preparação, resposta e recuperação de desastres. Procure o contato da Defesa Civil do seu município. Em muitos locais, o número é <strong>199</strong>.</li>
+                <li><strong>Corpo de Bombeiros:</strong> Para situações de incêndio, resgates e outras emergências. O número é <strong>193</strong>.</li>
+                <li><strong>Polícia Militar:</strong> Para segurança e ordem pública. O número é <strong>190</strong>.</li>
+                <li><strong>Serviços de Saúde:</strong> Mantenha à mão o contato de hospitais, postos de saúde e médicos de sua família.</li>
+                <li><strong>Alertas Meteorológicos:</strong> Siga as redes sociais e websites de órgãos oficiais de meteorologia (ex: INMET no Brasil) para receber alertas e previsões.</li>
+                <li><strong>Rádio Local:</strong> Em caso de falta de energia ou internet, rádios a pilhas sintonizados em estações locais podem ser sua única fonte de informação.</li>
+                <li><strong>Aplicativos de Emergência:</strong> Verifique se seu município ou estado possui aplicativos de alerta e informações sobre desastres.</li>
+            </ul>
+            <p>Esteja sempre atento aos comunicados das autoridades locais e compartilhe informações confiáveis.</p>
+        </div>
+    </section>
+
+    <section id="quiz" class="quiz-section glass">
+        <div class="container quiz-container">
+            <div class="question-bar"></div>
+            
+            <div class="question-item"> 
+                <p class="quiz-question" id="quiz-question-text-1">Qual item é essencial em um kit de emergência para desastres climáticos?</p>
+                <form class="quiz-form" data-question-id="1">
+                    <div class="quiz-options">
+                        <input type="radio" id="q1_option1" name="quizOption1" value="Remédios e cosméticos">
+                        <label for="q1_option1">Remédios e cosméticos</label>
+
+                        <input type="radio" id="q1_option2" name="quizOption1" value="Água potável e alimentos não perecíveis">
+                        <label for="q1_option2">Água potável e alimentos não perecíveis</label>
+
+                        <input type="radio" id="q1_option3" name="quizOption1" value="Joias e dinheiro em grande quantidade">
+                        <label for="q1_option3">Joias e dinheiro em grande quantidade</label>
+
+                        <input type="radio" id="q1_option4" name="quizOption1" value="Roupas de festa e calçados novos">
+                        <label for="q1_option4">Roupas de festa e calçados novos</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Verificar Resposta</button>
+                </form>
+                <p class="quiz-result" id="quiz-result-1"></p>
+            </div>
+
+            <div class="question-item" style="display: none;"> 
+                <p class="quiz-question" id="quiz-question-text-2">Em caso de enchente, qual destas ações é crucial para sua segurança?</p>
+                <form class="quiz-form" data-question-id="2">
+                    <div class="quiz-options">
+                        <input type="radio" id="q2_option1" name="quizOption2" value="Tentar salvar objetos de valor da casa.">
+                        <label for="q2_option1">Tentar salvar objetos de valor da casa.</label>
+
+                        <input type="radio" id="q2_option2" name="quizOption2" value="Buscar abrigo em locais altos e seguros.">
+                        <label for="q2_option2">Buscar abrigo em locais altos e seguros.</label>
+
+                        <input type="radio" id="q2_option3" name="quizOption2" value="Dirigir o carro por ruas alagadas.">
+                        <label for="q2_option3">Dirigir o carro por ruas alagadas.</label>
+
+                        <input type="radio" id="q2_option4" name="quizOption2" value="Entrar em contato com a água para verificar o nível.">
+                        <label for="q2_option4">Entrar em contato com a água para verificar o nível.</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Verificar Resposta</button>
+                </form>
+                <p class="quiz-result" id="quiz-result-2"></p>
+            </div>
+
+            <div class="question-item" style="display: none;">
+                <p class="quiz-question" id="quiz-question-text-3">Ao perceber sinais de deslizamento de terra (rachaduras, estalos), qual a primeira atitude?</p>
+                <form class="quiz-form" data-question-id="3">
+                    <div class="quiz-options">
+                        <input type="radio" id="q3_option1" name="quizOption3" value="Avisar apenas a família mais próxima.">
+                        <label for="q3_option1">Avisar apenas a família mais próxima.</label>
+
+                        <input type="radio" id="q3_option2" name="quizOption3" value="Tentar escorar a área afetada.">
+                        <label for="q3_option2">Tentar escorar a área afetada.</label>
+
+                        <input type="radio" id="q3_option3" name="quizOption3" value="Sair imediatamente do local e buscar abrigo em área segura.">
+                        <label for="q3_option3">Sair imediatamente do local e buscar abrigo em área segura.</label>
+
+                        <input type="radio" id="q3_option4" name="quizOption3" value="Esperar a Defesa Civil chegar para avaliar.">
+                        <label for="q3_option4">Esperar a Defesa Civil chegar para avaliar.</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Verificar Resposta</button>
+                </form>
+                <p class="quiz-result" id="quiz-result-3"></p>
+            </div>
+
+            <div class="question-item" style="display: none;">
+                <p class="quiz-question" id="quiz-question-text-4">Durante uma tempestade severa com raios e ventos fortes, o que você deve fazer?</p>
+                <form class="quiz-form" data-question-id="4">
+                    <div class="quiz-options">
+                        <input type="radio" id="q4_option1" name="quizOption4" value="Filmar a tempestade de perto para as redes sociais.">
+                        <label for="q4_option1">Filmar a tempestade de perto para as redes sociais.</label>
+
+                        <input type="radio" id="q4_option2" name="quizOption4" value="Ficar perto de janelas para observar.">
+                        <label for="q4_option2">Ficar perto de janelas para observar.</label>
+
+                        <input type="radio" id="q4_option3" name="quizOption4" value="Desligar aparelhos eletrônicos e evitar contato com objetos metálicos.">
+                        <label for="q4_option3">Desligar aparelhos eletrônicos e evitar contato com objetos metálicos.</label>
+
+                        <input type="radio" id="q4_option4" name="quizOption4" value="Abrigar-se debaixo de árvores altas.">
+                        <label for="q4_option4">Abrigar-se debaixo de árvores altas.</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Verificar Resposta</button>
+                </form>
+                <p class="quiz-result" id="quiz-result-4"></p>
+            </div>
+
+            <div class="question-item" style="display: none;">
+                <p class="quiz-question" id="quiz-question-text-5">Em períodos de seca e onda de calor, qual é a principal recomendação para a saúde?</p>
+                <form class="quiz-form" data-question-id="5">
+                    <div class="quiz-options">
+                        <input type="radio" id="q5_option1" name="quizOption5" value="Realizar atividades físicas intensas ao ar livre.">
+                        <label for="q5_option1">Realizar atividades físicas intensas ao ar livre.</label>
+
+                        <input type="radio" id="q5_option2" name="quizOption5" value="Esperar sentir sede para beber água.">
+                        <label for="q5_option2">Esperar sentir sede para beber água.</label>
+
+                        <input type="radio" id="q5_option3" name="quizOption5" value="Manter-se hidratado bebendo bastante líquido e evitar exposição prolongada ao sol.">
+                        <label for="q5_option3">Manter-se hidratado bebendo bastante líquido e evitar exposição prolongada ao sol.</label>
+
+                        <input type="radio" id="q5_option4" name="quizOption5" value="Usar roupas escuras para absorver menos calor.">
+                        <label for="q5_option4">Usar roupas escuras para absorver menos calor.</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Verificar Resposta</button>
+                </form>
+                <p class="quiz-result" id="quiz-result-5"></p>
+            </div>
+
+            <div class="question-item" style="display: none;">
+                <p class="quiz-question" id="quiz-question-text-6">Se houver um incêndio florestal próximo e você for alertado, qual a ação prioritária?</p>
+                <form class="quiz-form" data-question-id="6">
+                    <div class="quiz-options">
+                        <input type="radio" id="q6_option1" name="quizOption6" value="Tentar apagar o fogo com baldes de água.">
+                        <label for="q6_option1">Tentar apagar o fogo com baldes de água.</label>
+
+                        <input type="radio" id="q6_option2" name="quizOption6" value="Aguardar instruções por telefone fixo.">
+                        <label for="q6_option2">Aguardar instruções por telefone fixo.</label>
+
+                        <input type="radio" id="q6_option3" name="quizOption6" value="Evacuar imediatamente seguindo as rotas de fuga.">
+                        <label for="q6_option3">Evacuar imediatamente seguindo as rotas de fuga.</label>
+
+                        <input type="radio" id="q6_option4" name="quizOption6" value="Correr para a área de onde a fumaça está vindo para ver melhor.">
+                        <label for="q6_option4">Correr para a área de onde a fumaça está vindo para ver melhor.</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Verificar Resposta</button>
+                </form>
+                <p class="quiz-result" id="quiz-result-6"></p>
+            </div>
+
+            <div class="question-item" style="display: none;">
+                <p class="quiz-question" id="quiz-question-text-7">Durante a passagem do 'olho' de um ciclone, o que se deve ter em mente?</p>
+                <form class="quiz-form" data-question-id="7">
+                    <div class="quiz-options">
+                        <input type="radio" id="q7_option1" name="quizOption7" value="Que a tempestade acabou e é seguro sair.">
+                        <label for="q7_option1">Que a tempestade acabou e é seguro sair.</label>
+
+                        <input type="radio" id="q7_option2" name="quizOption7" value="Que o vento pode retornar com força, vindo da direção oposta.">
+                        <label for="q7_option2">Que o vento pode retornar com força, vindo da direção oposta.</label>
+
+                        <input type="radio" id="q7_option3" name="quizOption7" value="É o momento ideal para fazer reparos externos na casa.">
+                        <label for="q7_option3">É o momento ideal para fazer reparos externos na casa.</label>
+
+                        <input type="radio" id="q7_option4" name="quizOption7" value="Aproveitar para estocar mais água e alimentos.">
+                        <label for="q7_option4">Aproveitar para estocar mais água e alimentos.</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Verificar Resposta</button>
+                </form>
+                <p class="quiz-result" id="quiz-result-7"></p>
+            </div>
+
+            <div class="question-item" style="display: none;">
+                <p class="quiz-question" id="quiz-question-text-8">Em uma nevasca intensa, qual é a principal preocupação com a saúde?</p>
+                <form class="quiz-form" data-question-id="8">
+                    <div class="quiz-options">
+                        <input type="radio" id="q8_option1" name="quizOption8" value="Dificuldade em encontrar entretenimento.">
+                        <label for="q8_option1">Dificuldade em encontrar entretenimento.</label>
+
+                        <input type="radio" id="q8_option2" name="quizOption8" value="Risco de hipotermia e congelamento.">
+                        <label for="q8_option2">Risco de hipotermia e congelamento.</label>
+
+                        <input type="radio" id="q8_option3" name="quizOption8" value="Falta de internet.">
+                        <label for="q8_option3">Falta de internet.</label>
+
+                        <input type="radio" id="q8_option4" name="quizOption8" value="Acúmulo de lixo na rua.">
+                        <label for="q8_option4">Acúmulo de lixo na rua.</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Verificar Resposta</button>
+                </form>
+                <p class="quiz-result" id="quiz-result-8"></p>
+            </div>
+
+            <div class="question-item" style="display: none;">
+                <p class="quiz-question" id="quiz-question-text-9">Se você estiver na costa e sentir um terremoto forte ou vir o mar recuar anormalmente, o que você deve fazer?</p>
+                <form class="quiz-form" data-question-id="9">
+                    <div class="quiz-options">
+                        <input type="radio" id="q9_option1" name="quizOption9" value="Correr para a praia para ver o fenômeno de perto.">
+                        <label for="q9_option1">Correr para a praia para ver o fenômeno de perto.</label>
+
+                        <input type="radio" id="q9_option2" name="quizOption9" value="Esperar por um alerta oficial antes de se mover.">
+                        <label for="q9_option2">Esperar por um alerta oficial antes de se mover.</label>
+
+                        <input type="radio" id="q9_option3" name="quizOption9" value="Procurar terras altas imediatamente.">
+                        <label for="q9_option3">Procurar terras altas imediatamente.</label>
+
+                        <input type="radio" id="q9_option4" name="quizOption9" value="Ligar para um amigo para avisar.">
+                        <label for="q9_option4">Ligar para um amigo para avisar.</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Verificar Resposta</button>
+                </form>
+                <p class="quiz-result" id="quiz-result-9"></p>
+            </div>
+
+            <div class="question-item" style="display: none;">
+                <p class="quiz-question" id="quiz-question-text-10">Qual é a importância de ter um ponto de encontro familiar definido em caso de evacuação?</p>
+                <form class="quiz-form" data-question-id="10">
+                    <div class="quiz-options">
+                        <input type="radio" id="q10_option1" name="quizOption10" value="É apenas um detalhe burocrático.">
+                        <label for="q10_option1">É apenas um detalhe burocrático.</label>
+
+                        <input type="radio" id="q10_option2" name="quizOption10" value="Ajuda a centralizar a comunicação e garantir que todos se encontrem após o desastre.">
+                        <label for="q10_option2">Ajuda a centralizar a comunicação e garantir que todos se encontrem após o desastre.</label>
+
+                        <input type="radio" id="q10_option3" name="quizOption10" value="É necessário apenas para quem mora sozinho.">
+                        <label for="q10_option3">É necessário apenas para quem mora sozinho.</label>
+
+                        <input type="radio" id="q10_option4" name="quizOption10" value="Serve para guardar objetos de valor.">
+                        <label for="q10_option4">Serve para guardar objetos de valor.</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Verificar Resposta</button>
+                </form>
+                <p class="quiz-result" id="quiz-result-10"></p>
+            </div>
+
+            <div class="question-item" style="display: none;">
+                <p class="quiz-question" id="quiz-question-text-11">Por que é importante manter documentos importantes em local seguro e à prova d'água?</p>
+                <form class="quiz-form" data-question-id="11">
+                    <div class="quiz-options">
+                        <input type="radio" id="q11_option1" name="quizOption11" value="Para evitar que se molhem com a chuva diária.">
+                        <label for="q11_option1">Para evitar que se molhem com a chuva diária.</label>
+
+                        <input type="radio" id="q11_option2" name="quizOption11" value="Para facilitar a identificação e a recuperação em caso de perda ou dano da residência.">
+                        <label for="q11_option2">Para facilitar a identificação e a recuperação em caso de perda ou dano da residência.</label>
+
+                        <input type="radio" id="q11_option3" name="quizOption11" value="Apenas para evitar que curiosos os vejam.">
+                        <label for="q11_option3">Apenas para evitar que curiosos os vejam.</label>
+
+                        <input type="radio" id="q11_option4" name="quizOption11" value="Não é importante, pois cópias digitais são sempre suficientes.">
+                        <label for="q11_option4">Não é importante, pois cópias digitais são sempre suficientes.</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Verificar Resposta</button>
+                </form>
+                <p class="quiz-result" id="quiz-result-11"></p>
+            </div>
+
+            <div class="question-item" style="display: none;">
+                <p class="quiz-question" id="quiz-question-text-12">Por que é crucial saber desligar a energia e o gás da sua casa em caso de emergência?</p>
+                <form class="quiz-form" data-question-id="12">
+                    <div class="quiz-options">
+                        <input type="radio" id="q12_option1" name="quizOption12" value="Para economizar energia durante a catástrofe.">
+                        <label for="q12_option1">Para economizar energia durante a catástrofe.</label>
+
+                        <input type="radio" id="q12_option2" name="quizOption12" value="Para evitar choques elétricos, incêndios e vazamentos de gás que podem agravar a situação.">
+                        <label for="q12_option2">Para evitar choques elétricos, incêndios e vazamentos de gás que podem agravar a situação.</label>
+
+                        <input type="radio" id="q12_option3" name="quizOption12" value="Porque é uma exigência legal.">
+                        <label for="q12_option3">Porque é uma exigência legal.</label>
+
+                        <input type="radio" id="q12_option4" name="quizOption12" value="Para não danificar os aparelhos eletrônicos.">
+                        <label for="q12_option4">Para não danificar os aparelhos eletrônicos.</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Verificar Resposta</button>
+                </form>
+                <p class="quiz-result" id="quiz-result-12"></p>
+            </div>
+
+            <div class="question-item" style="display: none;">
+                <p class="quiz-question" id="quiz-question-text-13">Em uma situação de desastre, por que um rádio a pilhas é um item importante no kit de emergência?</p>
+                <form class="quiz-form" data-question-id="13">
+                    <div class="quiz-options">
+                        <input type="radio" id="q13_option1" name="quizOption13" value="Para ouvir música e relaxar.">
+                        <label for="q13_option1">Para ouvir música e relaxar.</label>
+
+                        <input type="radio" id="q13_option2" name="quizOption13" value="Porque celulares e internet podem ficar sem sinal, e o rádio pode ser a única forma de obter informações e alertas.">
+                        <label for="q13_option2">Porque celulares e internet podem ficar sem sinal, e o rádio pode ser a única forma de obter informações e alertas.</label>
+
+                        <input type="radio" id="q13_option3" name="quizOption13" value="Para se comunicar com outras pessoas à distância.">
+                        <label for="q13_option3">Para se comunicar com outras pessoas à distância.</label>
+
+                        <input type="radio" id="q13_option4" name="quizOption13" value="Não é mais útil na era dos smartphones.">
+                        <label for="q13_option4">Não é mais útil na era dos smartphones.</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Verificar Resposta</button>
+                </form>
+                <p class="quiz-result" id="quiz-result-13"></p>
+            </div>
+
+            <div class="question-item" style="display: none;">
+                <p class="quiz-question" id="quiz-question-text-14">Após um desastre, qual a atitude mais indicada em relação aos seus arredores?</p>
+                <form class="quiz-form" data-question-id="14">
+                    <div class="quiz-options">
+                        <input type="radio" id="q14_option1" name="quizOption14" value="Priorizar a sua própria família.">
+                        <label for="q14_option1">Priorizar a sua própria família.</label>
+
+                        <input type="radio" id="q14_option2" name="quizOption14" value="Avisar vizinhos que podem ajudar e contribuir na recuperação.">
+                        <label for="q14_option2">Avisar vizinhos que podem ajudar e contribuir na recuperação.</label>
+
+                        <input type="radio" id="q14_option3" name="quizOption14" value="Ficar isolado para não correr riscos.">
+                        <label for="q14_option3">Ficar isolado para não correr riscos.</label>
+
+                        <input type="radio" id="q14_option4" name="quizOption14" value="Esperar a chegada de equipes de resgate profissionais para qualquer tipo de ajuda.">
+                        <label for="q14_option4">Esperar a chegada de equipes de resgate profissionais para qualquer tipo de ajuda.</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Verificar Resposta</button>
+                </form>
+                <p class="quiz-result" id="quiz-result-14"></p>
+            </div>
+
+            <button type="button" id="next-question-btn" class="btn-submit" style="display: none;">Próxima Pergunta</button>
+        </div>
+    </section>
+
+    <section id="checklist" class="glass">
+        <div class="container">
+            <h2>Checklist de Preparação</h2>
+            <p>Use esta lista para garantir que você e sua família estão prontos para qualquer situação. Marque os itens à medida que os completar:</p>
+            <div class="checklist-item">
+                <input type="checkbox" id="item1">
+                <label for="item1">Kit de emergência com água, alimentos não perecíveis, lanterna, rádio a pilhas, apito, kit de primeiros socorros e baterias extras.</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item2">
+                <label for="item2">Documentos importantes (identidade, certidões, apólices de seguro) em saco à prova d'água.</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item3">
+                <label for="item3">Plano de emergência familiar definido e praticado (pontos de encontro, contatos).</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item4">
+                <label for="item4">Cópia de chaves de casa e carro em local seguro.</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item5">
+                <label for="item5">Saber onde desligar a energia, o gás e a água da casa.</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item6">
+                <label for="item6">Combustível no tanque do carro (pelo menos meio tanque).</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item7">
+                <label for="item7">Medicamentos de uso contínuo com receita e para alguns dias a mais.</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item8">
+                <label for="item8">Dinheiro em espécie (cédulas pequenas).</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item9">
+                <label for="item9">Comida e água para animais de estimação, com coleira e identificação.</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item10">
+                <label for="item10">Carregadores portáteis para celular.</label>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2024 Guia de Preparação para Desastres Climáticos. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="js/java.js"></script>
 </body>
 </html>
