@@ -1,84 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prepare-se - Integrantes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrantes do Projeto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/integrantes.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="fixed top-0 left-0 w-full backdrop-blur-lg bg-black/30 z-50 shadow-lg">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-      <a href="index.html" class="text-emerald-400 font-extrabold text-2xl tracking-wide hover:text-emerald-300">Prepare-se</a>
-      <ul class="hidden md:flex space-x-8 text-gray-300 font-semibold">
-        <li><a href="index.html#info" class="hover:text-emerald-400 transition">Informações</a></li>
-        <li><a href="index.html#checklist" class="hover:text-emerald-400 transition">Checklist</a></li>Add commentMore actions
-        <li><a href="index.html#quiz" class="hover:text-emerald-400 transition">Quiz</a></li>
-        <li><a href="contato.html" class="hover:text-emerald-400 transition">Contato</a></li>
-        <li><a href="faq.html" class="hover:text-emerald-400 transition">FAQ</a></li>
-        <li><a href="integrantes.html" class="hover:text-emerald-400 transition">Integrantes</a></li>
-      </ul>
-      <button id="menu-btn" class="md:hidden text-emerald-400 focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
-        </svg>
-      </button>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="menu" class="hidden md:hidden bg-black/70 backdrop-blur-lg px-6 py-4 space-y-4 text-center text-gray-300 font-semibold">
-      <a href="index.html#info" class="block hover:text-emerald-400 transition">Informações</a>
-      <a href="index.html#checklist" class="block hover:text-emerald-400 transition">Checklist</a>
-      <a href="index.html#quiz" class="block hover:text-emerald-400 transition">Quiz</a>
-      <a href="contato.html" class="block hover:text-emerald-400 transition">Contato</a>
-      <a href="faq.html" class="block hover:text-emerald-400 transition">FAQ</a>
-      <a href="integrantes.html" class="block hover:text-emerald-400 transition">Integrantes</a>
-    </div>
-  </nav>
+    <header class="navbar">
+        <div class="container">
+            <h1>Guia de Preparação</h1>
+            <button class="hamburger-menu" aria-label="Abrir menu de navegação">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html#boas-vindas">Início</a></li>
+                    <li><a href="index.html#informacoes">Informações</a></li>
+                    <li><a href="index.html#plano-familiar">Plano Familiar</a></li>
+                    <li><a href="index.html#recursos-uteis">Recursos</a></li>
+                    <li><a href="index.html#quiz">Quiz</a></li>
+                    <li><a href="index.html#checklist">Checklist</a></li>
+                    <li><a href="integrantes.html">Integrantes</a></li>
+                     <li><a href="faq.html">Faq</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Integrantes -->
-  <section id="integrantes" class="min-h-screen flex items-center justify-center py-24 px-6 bg-[#162433]">
-    <div class="max-w-3xl mx-auto bg-[#0f172a] rounded-3xl p-12 glass shadow-lg">
-      <h2 class="text-3xl font-bold mb-10 text-center text-emerald-400">Integrantes do Projeto</h2>
-      <div class="space-y-8">
-        <div class="flex items-center gap-6">
-          <img src="img/bruno.jpeg" alt="Foto de João Silva" class="w-24 h-24 rounded-full object-cover border-2 border-emerald-400" />
-          <div>
-            <h3 class="text-xl font-semibold text-gray-200">Bruno Jacob</h3>
-            <p class="text-gray-300 text-sm">RM: 12345-6, Turma: 1TDSP</p>
-            <a href="https://www.linkedin.com/in/bruno-jacob-35a57635a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="text-emerald-400 hover:text-emerald-300 underline">LinkedIn</a> |
-            <a href="https://github.com/brunopfnm" target="_blank" class="text-emerald-400 hover:text-emerald-300 underline">GitHub</a>
-          </div>
-        </div>
-        <div class="flex items-center gap-6">
-          <img src="img/erick.jpeg" alt="Foto de Maria Oliveira" class="w-24 h-24 rounded-full object-cover border-2 border-emerald-400" />
-          <div>
-            <h3 class="text-xl font-semibold text-gray-200">Erick Gama</h3>
-            <p class="text-gray-300 text-sm">RM: 67890-1, Turma: 1TDSP</p>
-            <a href="https://www.linkedin.com/in/erick-gama-0598b9325/" target="_blank" class="text-emerald-400 hover:text-emerald-300 underline">LinkedIn</a> |
-            <a href="https://github.com/Erick3kk" target="_blank" class="text-emerald-400 hover:text-emerald-300 underline">GitHub</a>
-          </div>
-        </div>
-        <div class="flex items-center gap-6">
-          <img src="img/matheus.jpeg" alt="Foto de Pedro Santos" class="w-24 h-24 rounded-full object-cover border-2 border-emerald-400" />
-          <div>
-            <h3 class="text-xl font-semibold text-gray-200">Pedro Santos</h3>
-            <p class="text-gray-300 text-sm">RM: 54321-0, Turma: 1TDSP</p>
-            <a href="https://www.linkedin.com/in/matheus-nascimento-corr%C3%A9gio-39a344354/" target="_blank" class="text-emerald-400 hover:text-emerald-300 underline">LinkedIn</a> |
-            <a href="https://github.com/MATHEUSN06" target="_blank" class="text-emerald-400 hover:text-emerald-300 underline">GitHub</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <main>
+        <section id="integrantes" class="glass integrantes-section">
+            <div class="container">
+                <h2>Conheça os Integrantes do Projeto</h2>
+                <p class="intro-text">Nosso time é composto por três alunos dedicados a trazer informações valiosas sobre preparação para desastres climáticos.</p>
+                <div class="integrantes-container">
+                    <div class="integrante-card">
+                        <img src="img/matheus.jpeg" alt="Foto de Matheus Nascimeto Corrégio">
+                        <h3>Nome: Matheus Nascimeto Corrégio</h3>
+                        <p>RM: 563765</p>
+                        <p>Turma: 1TDSPV</p>
+                        <div class="social-links">
+                            <a href="https://github.com/MATHEUSN06" target="_blank">GitHub</a>
+                            <a href="https://www.linkedin.com/in/matheus-nascimento-corr%C3%A9gio-39a344354/" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+                    <div class="integrante-card">
+                        <img src="img/erick.jpeg" alt="Foto de Erick de Faria Gama">
+                        <h3>Nome: Erick de Faria Gama</h3>
+                        <p>RM: 561951</p>
+                        <p>Turma: 1TDSPV</p>
+                        <div class="social-links">
+                            <a href="https://github.com/Erick3kk" target="_blank">GitHub</a>
+                            <a href="https://www.linkedin.com/in/erick-gama-0598b9325/" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+                    <div class="integrante-card">
+                        <img src="img/bruno.jpeg" alt="Foto de Bruno Jacob">
+                        <h3>Nome: Bruno Jacob</h3>
+                        <p>RM: 565249</p>
+                        <p>Turma: 1TDSPV</p>
+                        <div class="social-links">
+                            <a href="https://github.com/brunopfnm" target="_blank">GitHub</a>
+                            <a href="https://www.linkedin.com/in/bruno-jacob-35a57635a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <script>
-    // Funcionalidade do menu mobile
-    document.getElementById('menu-btn').addEventListener('click', function() {
-      const menu = document.getElementById('menu');
-      menu.classList.toggle('hidden');
-    });
-  </script>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Guia de Preparação para Desastres Climáticos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/java.js"></script>
 </body>
 </html>

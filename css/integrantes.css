@@ -1,0 +1,114 @@
+.integrantes-section {
+    padding: 4rem 0;
+}
+.integrantes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+.integrante-card {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px; /* Largura fixa para uniformidade */
+    min-height: 360px; /* Aumentado para acomodar novos campos */
+}
+.integrante-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(72, 240, 144, 0.4);
+    border-color: rgba(72, 240, 144, 0.6);
+}
+.integrante-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem; /* Ajustado o margin-bottom */
+    border: 2px solid #48f090;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.integrante-card h3 {
+    font-size: 1.8rem;
+    color: #a7f3d0;
+    margin: 0.5rem 0;
+    flex-grow: 1; /* Permite que o texto se ajuste ao espaço */
+    overflow: hidden; /* Evita que texto longo quebre o layout */
+    text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
+}
+.integrante-card p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin: 0.5rem 0;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.social-links a {
+    color: #e0e7ff;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: #48f090;
+}
+@media (max-width: 768px) {
+    .integrantes-container {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        gap: 1.5rem;
+    }
+    .integrante-card {
+        padding: 1.5rem;
+        width: 100%; /* Ocupa a largura disponível, mas limitada */
+        max-width: 300px; /* Limita a largura máxima */
+        min-height: 340px; /* Ajustado para novos campos */
+        margin: 0 auto; /* Centraliza os cartões */
+    }
+    .integrante-card img {
+        width: 120px;
+        height: 120px;
+    }
+    .integrante-card h3 {
+        font-size: 1.4rem;
+    }
+    .integrante-card p {
+        font-size: 1rem;
+    }
+    .social-links a {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 480px) {
+    .integrantes-container {
+        grid-template-columns: 1fr; /* Mantém uma coluna */
+        gap: 1rem;
+    }
+    .integrante-card {
+        padding: 1rem;
+        min-height: 320px; /* Ajustado para telas muito pequenas */
+    }
+    .integrante-card img {
+        width: 100px;
+        height: 100px;
+    }
+    .integrante-card h3 {
+        font-size: 1.3rem;
+    }
+    .integrante-card p {
+        font-size: 0.9rem;
+    }
+    .social-links a {
+        font-size: 0.8rem;
+    }
+}

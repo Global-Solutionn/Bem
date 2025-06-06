@@ -1,0 +1,104 @@
+.faq-section {
+    padding: 4rem 0;
+}
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.faq-item {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+.faq-item:hover {
+    border-color: rgba(72, 240, 144, 0.6);
+}
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    background: transparent;
+}
+.faq-question h3 {
+    font-size: 1.6rem;
+    color: #a7f3d0;
+    margin: 0;
+    flex-grow: 1;
+}
+.faq-question .toggle-icon {
+    font-size: 1.5rem;
+    color: #48f090;
+    transition: transform 0.3s ease;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.faq-answer p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin: 0;
+    padding-bottom: 1.5rem;
+}
+.faq-item input[type="checkbox"] {
+    display: none;
+}
+.faq-item input[type="checkbox"]:checked ~ .faq-answer {
+    max-height: 300px; /* Aumentado para respostas mais longas */
+    padding: 0 1.5rem 1.5rem;
+}
+.faq-item input[type="checkbox"]:checked ~ .faq-question .toggle-icon {
+    transform: rotate(45deg);
+}
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 3rem 0;
+    }
+    .faq-container {
+        gap: 1rem;
+    }
+    .faq-question h3 {
+        font-size: 1.4rem;
+    }
+    .faq-question .toggle-icon {
+        font-size: 1.3rem;
+    }
+    .faq-answer p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    .faq-section {
+        padding: 2rem 0;
+    }
+    .faq-question {
+        padding: 1rem;
+    }
+    .faq-question h3 {
+        font-size: 1.2rem;
+    }
+    .faq-question .toggle-icon {
+        font-size: 1.2rem;
+    }
+    .faq-answer {
+        padding: 0 1rem;
+    }
+    .faq-answer p {
+        font-size: 0.9rem;
+        padding-bottom: 1rem;
+    }
+    .faq-item input[type="checkbox"]:checked ~ .faq-answer {
+        padding: 0 1rem 1rem;
+        max-height: 250px; /* Ajustado para telas menores */
+    }
+}
