@@ -10,22 +10,32 @@ Interface amigável com design moderno, utilizando glassmorphism e suporte a dis
 
 Estrutura de Pastas e Arquivos
 A organização do projeto é a seguinte:
-├── index.html          # Página principal do site
 ├── css/
-│   └── style.css       # Arquivo de estilos com design responsivo e glassmorphism
-├── js/
-│   └── script.js       # Lógica interativa para menu, checklist e quiz
+│   ├── faq.css            # Arquivo de estilos com design 
+│   ├── integrantes.css    # Arquivo de estilos com design 
+└──     css style.css      # Arquivo de estilos com design 
+│
 ├── img/
-│   ├── novo.png        # Imagem do banner da seção inicial
-│   ├── enche.png       # Imagem para seção de enchentes
-│   ├── des.png         # Imagem para seção de deslizamentos
-│   ├── tempes.png      # Imagem para seção de tempestades
-│   ├── seca.png        # Imagem para seção de secas
-│   ├── incendio.png    # Imagem para seção de incêndios florestais
-│   ├── tornado.png     # Imagem para seção de ciclones
-│   ├── nevas.png       # Imagem para seção de nevascas
-│   ├── tsuna.png       # Imagem para seção de tsunamis
-└── README.md           # Documentação do projeto
+│   ├── banner.png     # Imagem do banner do site
+│   ├── bruno.jpeg     # Imagem do integrante
+│   ├── des.png        # Imagem para seção de deslizamentos
+│   ├── enche.png      # Imagem para seção de enchentes
+│   ├── erick.jpeg     # Imagem do integrante
+│   ├── incendio.png   # Imagem para seção de incendio
+│   ├── matheus.jpeg   # Imagem do integrante
+│   ├── README.md      # Documentação do projeto
+│   ├── nevas.png      # Imagem para seção de neves
+│   ├── seca.png       # Imagem para seção de seca
+│   ├── tempes.png     # Imagem para seção de tempestade
+│   ├── tornado.png    # Imagem para seção de tornado
+└──     tsuna.png      # Imagem para seção de tsunamis
+├── js/
+└── ├── script.js      # Lógica interativa para menu, checklist e quiz
+
+│ contato.html         # Página de contato do site
+│ faq.html             # Página de perguntas frequentes do site
+│ index.html           # Página principal do site
+│ Integrantes.html     # Página dos integrantes do site
 
 
 index.html: Contém a estrutura do site, com seções como Início, Informações, Plano Familiar, Recursos Úteis, Quiz e Checklist.
