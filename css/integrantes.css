@@ -18,8 +18,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 250px; /* Largura fixa para uniformidade */
-    min-height: 360px; /* Aumentado para acomodar novos campos */
+    width: 250px; 
+    min-height: 360px; 
 }
 .integrante-card:hover {
     transform: translateY(-10px);
@@ -31,7 +31,7 @@
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 1rem; /* Ajustado o margin-bottom */
+    margin: 0 auto 1rem; 
     border: 2px solid #48f090;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
@@ -39,9 +39,9 @@
     font-size: 1.8rem;
     color: #a7f3d0;
     margin: 0.5rem 0;
-    flex-grow: 1; /* Permite que o texto se ajuste ao espaço */
-    overflow: hidden; /* Evita que texto longo quebre o layout */
-    text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
+    flex-grow: 1; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 .integrante-card p {
     font-size: 1.1rem;
@@ -65,15 +65,15 @@
 }
 @media (max-width: 768px) {
     .integrantes-container {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        grid-template-columns: 1fr; 
         gap: 1.5rem;
     }
     .integrante-card {
         padding: 1.5rem;
-        width: 100%; /* Ocupa a largura disponível, mas limitada */
-        max-width: 300px; /* Limita a largura máxima */
-        min-height: 340px; /* Ajustado para novos campos */
-        margin: 0 auto; /* Centraliza os cartões */
+        width: 100%; 
+        max-width: 300px; 
+        min-height: 340px; 
+        margin: 0 auto; 
     }
     .integrante-card img {
         width: 120px;
@@ -91,12 +91,12 @@
 }
 @media (max-width: 480px) {
     .integrantes-container {
-        grid-template-columns: 1fr; /* Mantém uma coluna */
+        grid-template-columns: 1fr; 
         gap: 1rem;
     }
     .integrante-card {
         padding: 1rem;
-        min-height: 320px; /* Ajustado para telas muito pequenas */
+        min-height: 320px; 
     }
     .integrante-card img {
         width: 100px;

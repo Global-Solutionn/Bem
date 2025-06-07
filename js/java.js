@@ -1,7 +1,5 @@
-// js/java.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Lógica para o menu hambúrguer
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const navLinks = document.querySelector('.nav-links');
 
@@ -10,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburgerMenu.classList.toggle('active');
     });
 
-    // --- Lógica do Quiz ---
     const questions = [
         {
             id: 1,
@@ -172,34 +169,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const questionItems = document.querySelectorAll('.question-item');
     const nextQuestionBtn = document.getElementById('next-question-btn');
 
-    // Função para exibir uma pergunta específica
     function displayQuestion(index) {
-        // Esconde todas as perguntas
         questionItems.forEach(item => item.style.display = 'none');
-        // Mostra a pergunta atual
         if (questionItems[index]) {
             questionItems[index].style.display = 'block';
         }
 
-        // Atualiza a barra de progresso (opcional)
         const progress = ((index + 1) / questions.length) * 100;
         document.querySelector('.question-bar').style.width = `${progress}%`;
 
-        // Esconde o botão "Próxima Pergunta" se for a última
         if (index === questions.length - 1) {
             nextQuestionBtn.style.display = 'none';
         } else {
-            nextQuestionBtn.style.display = 'none'; // Inicialmente oculto, só aparece após resposta correta
+            nextQuestionBtn.style.display = 'none'; 
         }
     }
 
-    // Carrega a primeira pergunta ao iniciar
     displayQuestion(currentQuestionIndex);
 
-    // Adiciona evento de submit para cada formulário de quiz
     document.querySelectorAll('.quiz-form').forEach(form => {
         form.addEventListener('submit', (event) => {
-            event.preventDefault(); // IMPEDE O COMPORTAMENTO PADRÃO DE RECARREGAR A PÁGINA
+            event.preventDefault(); 
 
             const questionId = parseInt(form.dataset.questionId);
             const selectedOption = form.querySelector(`input[name="quizOption${questionId}"]:checked`);
@@ -212,11 +202,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (userAnswer === correct) {
                     resultParagraph.textContent = "Resposta Correta! 😊";
                     resultParagraph.style.color = "green";
-                    nextQuestionBtn.style.display = 'block'; // Mostra o botão para ir para a próxima
+                    nextQuestionBtn.style.display = 'block'; 
                 } else {
                     resultParagraph.textContent = `Resposta Incorreta. A resposta correta é: "${correct}" 😔`;
                     resultParagraph.style.color = "red";
-                    nextQuestionBtn.style.display = 'none'; // Oculta o botão se a resposta estiver errada
+                    nextQuestionBtn.style.display = 'none'; 
                 }
             } else {
                 resultParagraph.textContent = "Por favor, selecione uma opção.";
@@ -225,17 +215,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Adiciona evento para o botão "Próxima Pergunta"
     nextQuestionBtn.addEventListener('click', () => {
         currentQuestionIndex++;
         if (currentQuestionIndex < questions.length) {
             displayQuestion(currentQuestionIndex);
-            // Limpa o resultado da pergunta anterior e oculta o botão "Próxima Pergunta"
             document.querySelectorAll('.quiz-result').forEach(p => p.textContent = '');
             nextQuestionBtn.style.display = 'none';
         } else {
             alert('Fim do quiz! Você respondeu todas as perguntas.');
-            // Opcional: Reiniciar o quiz ou mostrar uma tela final
+            
             currentQuestionIndex = 0;
             displayQuestion(currentQuestionIndex);
             document.querySelectorAll('.quiz-result').forEach(p => p.textContent = '');
